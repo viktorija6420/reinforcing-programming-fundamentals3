@@ -31,11 +31,19 @@ project = {
   ]
 }
 
+# Update this hash so that each step has
+#the name of a committee member associated
+#with it (i.e. by adding an additional
+# person key in each step hash), and each
+#committee member has an equal number of
+# tasks. Avoid typing out the
+#committee members' names elsewhere in
+#your code
+
 project[:committee] << "Marta"
 step_1=1
 i=0
 project[:steps].each do |step|
-
   step[:person] = project[:committee][i]
   if (step_1 % 2 ) == 0
     i += 1
